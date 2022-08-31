@@ -100,7 +100,7 @@ const Home = () => {
           </input>Fetch By Collection Only
         </label>
       </div>
-      <div className="flex space-x-2 flex-row justify-center">
+      <div className="flex space-x-2 flex-col sm:flex-row ">
         
         <button onClick={() => { setWalletAddress(`vitalik.eth`); }} className="bg-transparent w-40 mt-4 hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded">
           1. Populate Wallet Address
