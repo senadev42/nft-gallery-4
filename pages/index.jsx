@@ -96,16 +96,16 @@ const Home = () => {
       <div className="flex flex-col w-full justify-center items-center gap-y-2 mt-3">
         <label className="text-gray-600 ">
           {byCollect}
-          <input value={byCollect} onClick={e => setByCollect(!byCollect)} type={"checkbox"} className="mr-2">
-          </input>Fetch By Collection Only
+          {/* <input value={byCollect} disabled onClick={e => setByCollect(!byCollect)} type={"checkbox"} className="mr-2">
+          </input>Fetch By Collection Only */}
         </label>
       </div>
       <div className="flex space-x-2 flex-col sm:flex-row ">
         
-        <button onClick={() => { setWalletAddress(`vitalik.eth`); }} className="bg-transparent w-40 mt-4 hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded">
+        <button onClick={() => { setByCollect(false); setWalletAddress(`vitalik.eth`); }} className="bg-transparent w-40 mt-4 hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded">
           1. Populate Wallet Address
         </button>
-        <button onClick={() => { setCollectionAddress(`0x23581767a106ae21c074b2276D25e5C3e136a68b`); }} className="bg-transparent w-40 mt-4 hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded">
+        <button onClick={() => {setByCollect(true); setCollectionAddress(`0x23581767a106ae21c074b2276D25e5C3e136a68b`); }} className="bg-transparent w-40 mt-4 hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded">
           1. Populate Collection Address
         </button>
         <button onClick={() => byCollect ? fetchNFTsForCollection() : fetchNFTs()} className="bg-transparent w-40 mt-4 hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded">
